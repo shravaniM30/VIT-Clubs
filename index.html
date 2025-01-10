@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT Pune Clubs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #004e7c;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            z-index: 10; /* Make sure navbar stays on top */
+            box-sizing: border-box;
+        }
+
+        nav img {
+            height: 50px; /* Adjust logo size */
+            width: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+            padding: 15px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff6f61;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 100; /* Ensures dropdown appears above the content */
+            padding: 10px;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ff6f61;
+            color: white;
+        }
+
+        /* Main Section Styling */
+        .main-content {
+            padding: 40px;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            position: relative;
+        }
+
+        .main-content h1 {
+            color: #004e7c;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            color: #666;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Image Section */
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px; /* Space between images */
+            margin-top: 30px;
+        }
+
+        .image-gallery img {
+            width: 30%; /* Make images responsive */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #004e7c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                padding: 10px;
+            }
+
+            .dropdown-content {
+                min-width: 100%;
+            }
+
+            .image-gallery {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .image-gallery img {
+                width: 80%; /* Adjust image size on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <img src="https://www.vit.edu/wp-content/uploads/2024/09/Group-148284.webp" alt="VIT Pune Logo"> 
+        <ul>
+            <li class="dropdown">
+                <a href="#">Clubs</a>
+                <div class="dropdown-content">
+                    <a href="../Rough Works/aaroh.html">Aaroh</a>
+                    <a href="../Rough Works/chess club.html">C-Club</a>
+                    <a href="../Rough Works/zephyr.html">Zephyr</a>
+                </div>
+            </li>
+            <li><a href="#about">About VIT Pune</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome to VIT Pune Clubs</h1>
+        <p>Explore the various clubs at VIT Pune and get involved in activities that match your interests.</p>
+
+        <!-- About VIT Pune Section -->
+        <div class="info-section" id="about">
+            <h2>About VIT Pune</h2>
+            <p>VIT Pune is one of the top universities in India, known for its excellent academic standards, vibrant campus life, and diverse student clubs. The university offers various opportunities to its students to grow, not only academically but also socially and culturally. Whether you're into music, sports, or dance, VIT Pune has something for everyone!</p>
+        </div>
+
+        <!-- Image Gallery Section -->
+        <div class="image-gallery">
+            <img src="../Photos/A building.jpeg" alt="VIT Pune Image 1" height="200"> 
+            <img src="../Photos/E building 2.jpeg" alt="VIT Pune Image 2" height="200"> 
+            <img src="../Photos/Ground 2.jpeg" alt="VIT Pune Image 3" height="200"> 
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 VIT Pune. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
