@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Club - VIT Pune</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7F9F9; /* Soft white background */
+            color: #34495E; /* Dark charcoal text */
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #1ABC9C; /* Fresh teal */
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            z-index: 10;
+            box-sizing: border-box;
+        }
+
+        nav img {
+            height: 50px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            padding: 15px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #FF6F61; /* Light coral for hover effect */
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            padding: 40px;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            position: relative;
+        }
+
+        .main-content h1 {
+            color: #1ABC9C; /* Teal title */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Section Titles */
+        h2 {
+            color: #1ABC9C; /* Teal section titles */
+            margin-top: 40px;
+            font-size: 28px;
+            text-decoration: underline;
+        }
+
+        /* Event Registration Form */
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #BDC3C7; /* Light gray border */
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #1ABC9C; /* Fresh teal button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #FF6F61; /* Coral button hover */
+        }
+
+        /* Club Photos Section */
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .image-gallery img {
+            width: 30%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Video Section */
+        .video-container {
+            margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .video-container video {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1ABC9C; /* Fresh teal footer */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                padding: 10px;
+            }
+
+            .image-gallery {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .image-gallery img {
+                width: 80%;
+            }
+
+            .video-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <img src="../Photos/Chess Club logo.png" alt="Chess Club Logo"> <!-- Replace with actual logo -->
+        <ul>
+            <li><a href="../Rough Works/index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome to the Chess Club</h1>
+        <p>The Chess Club at VIT Pune is dedicated to promoting the intellectual game of chess. We host tournaments, organize workshops, and provide a platform for chess enthusiasts to enhance their skills.</p>
+
+        <!-- Previous Events -->
+        <section id="previous-events">
+            <h2>Previous Events</h2>
+            <p>Check out the past events we’ve organized:</p>
+            <ul>
+                <li>VIT Chess Tournament 2024 - A grand chess tournament</li>
+                <li>Chess Blitz Night - Quick games with fun prizes</li>
+                <li>Online Chess Championship - A virtual chess tournament</li>
+            </ul>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section id="upcoming-events">
+            <h2>Upcoming Events</h2>
+            <p>Stay tuned for our exciting upcoming events:</p>
+            <ul>
+                <li>Annual Chess Tournament 2025</li>
+                <li>Chess Open - A city-wide competition</li>
+                <li>Chess Workshop: Advanced Tactics</li>
+            </ul>
+        </section>
+
+        <!-- Event Registration Form -->
+        <section id="event-registration">
+            <h2>Register for Upcoming Event</h2>
+            <div class="form-container">
+                <form id="eventForm" onsubmit="return validateForm()">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="event">Select Event:</label>
+                    <select id="event" name="event" required>
+                        <option value="chess-tournament">Annual Chess Tournament 2025</option>
+                        <option value="chess-open">Chess Open</option>
+                        <option value="workshop">Advanced Chess Workshop</option>
+                    </select>
+
+                    <label for="message">Message (Optional):</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+
+                    <button type="submit">Register</button>
+                </form>
+                <p id="formMessage"></p>
+            </div>
+        </section>
+
+        <!-- Club Photos -->
+        <section id="club-photos">
+            <h2>Club Photos</h2>
+            <div class="image-gallery">
+                <img src="../Photos/Chess Club photo 1.png" alt="Chess Event 1"> 
+                <img src="../Photos/Chess Club photo 2.png" alt="Chess Event 2"> 
+                <img src="../Photos/Chess Club photo 3.png" alt="Chess Event 3"> 
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="club-video">
+            <h2>Watch Our Latest Chess Match</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="../Videos/C club video.mp4" type="video/mp4"> <!-- Replace with actual video path -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Chess Club, VIT Pune. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Event Form Validation -->
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var event = document.getElementById("event").value;
+
+            if (name === "" || email === "" || phone === "" || event === "") {
+                document.getElementById("formMessage").textContent = "Please fill all the fields.";
+                document.getElementById("formMessage").style.color = "red";
+                return false;
+            } else {
+                document.getElementById("formMessage").textContent = "Registration successful!";
+                document.getElementById("formMessage").style.color = "green";
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>
